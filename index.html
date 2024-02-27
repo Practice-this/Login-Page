@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applying Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Apply To join 7 Sinisters</h1>
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button>Apply</button>
+            </form>
+        </div>
+
+        <div class="form-container sign-in">
+            <form>
+                <h1>Re-Join</h1>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button>re-join</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel left">
+                    <h1>Welcome Back!</h1>
+                    <p>Enter Your Details To Re-Join The Group </p>
+                    <button class="hidden" id="login">
+                        Re-Join
+                    </button>
+                </div>
+                <div class="toggle-panel right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Register Your Details To Join The Group </p>
+                    <button class="hidden" id="register">
+                        Apply
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const container = document.getElementById('container');
+        const registerBtn = document.getElementById('register');
+        const loginBtn = document.getElementById('login');
+
+        registerBtn.addEventListener('click', () => 
+        {
+            container.classList.add("active");
+        });
+        loginBtn.addEventListener('click', () =>
+        {
+            container.classList.remove("active");
+        });
+    </script>
+</body>
+</html>
